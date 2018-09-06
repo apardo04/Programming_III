@@ -42,12 +42,15 @@ int main() {
         // declaring variables inside a for loop wasn't valid C until C99
         int i;
         for (i = 0; i < studentsLen; i++) {
+                int totalCredits = students[i].course1Credits + students[i].course2Credits + students[i].course3Credits;
+                float totalPoints = (students[i].course1Grade *  students[i].course1Credits) + (students[i].course2Grade *  students[i].course2Credits) + (students[i].course3Grade *  students[i].course3Credits);
                 printf("Student Name: %s %s\n", students[i].fName, students[i].lName);
-                printf("Course\t\tCredits\t\tGrade\t\tGrade Points Earned\n");
-                printf("%s \t%d \t\t%.2lf \t\t%.2lf\n",  students[i].course1, students[i].course1Credits, students[i].course1Grade, students[i].course1Grade *  students[i].course1Credits);
-                printf("%s \t%d \t\t%.2lf \t\t%.2lf\n",  students[i].course2, students[i].course2Credits, students[i].course2Grade, students[i].course2Grade * students[i].course2Credits);
+                printf("Course\t\tCredits\t\t%10s\t\t%s\n", "Grade", "Grade Points Earned");
+                printf("%-7s \t%4d \t\t%10.2lf \t\t%19.2lf\n",  students[i].course1, students[i].course1Credits, students[i].course1Grade, students[i].course1Grade *  students[i].course1Credits);
+                printf("%-7s \t%4d \t\t%10.2lf \t\t%19.2lf\n",  students[i].course2, students[i].course2Credits, students[i].course2Grade, students[i].course2Grade * students[i].course2Credits);
+                printf("%-7s \t%4d \t\t%10.2lf \t\t%19.2lf\n",  students[i].course3, students[i].course3Credits, students[i].course3Grade, students[i].course3Grade * students[i].course3Credits);
+                printf("%-7s \t%4d \t\t\t\t%27.2lf\n\n\n", "Total", totalCredits, totalPoints);
         }
         //printf("Test print\n%s %s %s %lf\n", students[0].fName, students[0].lName, students[0].course1, students[0].course1Grade);
         return 0;
 }
-          
