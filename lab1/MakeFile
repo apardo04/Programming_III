@@ -1,10 +1,9 @@
-ll:    lab1
+gpa:     gpa.o
+	gcc gpa.o -o gpa -g
 
-lab1:     lab1.o
-        gcc lab1.o -o lab1 -g
-
-lab1.o:   lab1.c
-        gcc -c lab1.c -o lab1.o -g
+gpa.o:   lab1.c
+	gcc -c lab1.c -o gpa.o -g
 
 clean:
-        rm -f lab1 lab1.o core *~
+	rm -f gpa gpa.o core *~
+
