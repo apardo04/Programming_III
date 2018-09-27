@@ -11,8 +11,7 @@
 
 int debug = 0;
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
 	// Variables needed to keep track of flags and argument values
 	extern char *optarg;
 	extern int optind;
@@ -105,6 +104,6 @@ int main(int argc, char **argv)
 		arg += aname;
 	}
 	// Print results from calculations.	
-	printf("Result: %d\n", arg);
+	printf("%.2f\n", (float)arg);
 	exit(0);
 }

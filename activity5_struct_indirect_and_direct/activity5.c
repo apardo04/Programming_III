@@ -25,7 +25,7 @@ struct Student {
 
 int main() {
 	// Creating an array of students using the Grades struct
-	struct Student student0 = {"Adrian", "Pardo", "6104101", "September", 21, 1990, "Junior", 3.65};	
+	struct Student student0 = {"Adrian", "Pardo", "112233", "January", 01, 1990, "Junior", 3.65};
 	//struct student *sptr = student0;
 	printf("Name: %s %s\nStudent ID: %s\nDOB: %s %d %d\nStanding: %s\nGPA: %.2lf\n", student0.fName, student0.lName, student0.id, student0.dob.month, student0.dob.day, student0.dob.year, student0.standing, student0.gpa);
 	struct Student *sptr0 = &student0;
